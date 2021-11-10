@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a636d8146b55c81336571bf8affbb68f7a8a8ad92c352eaa8400d6aec721b1d0
+  sha256: 2087ad4405e3df59a87e42b9de5640ee7b73a2995395653151dc62e9f0b48ac5
 
 build:
   number: 0
