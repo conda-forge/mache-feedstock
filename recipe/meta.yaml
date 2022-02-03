@@ -21,10 +21,16 @@ requirements:
   run:
     - python >=3.7
     - lxml
+    - jinja2
+    - pyyaml
 
 test:
+  requires:
+    - pip
   imports:
     - mache
+  commands:
+    - pip check
 
 about:
   home: https://github.com/E3SM-Project/mache
