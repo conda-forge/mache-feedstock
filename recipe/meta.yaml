@@ -6,7 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
+  # url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/mache/archive/refs/tags/1.4.1.tar.gz
   sha256: 7320a4d37fde495358262cf3cd7b6a832a4a410d376fdc6b50b784bdc353a1b2
 
 build:
