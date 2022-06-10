@@ -1,18 +1,21 @@
 {% set name = "mache" %}
-{% set version = "1.2.0rc3" %}
+{% set version = "1.4.1rc1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 1900ff78fbc034ef64973483356774f5b10306e506b85bbb357c99c10e6b7938
+  # url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/mache/archive/refs/tags/1.4.1.tar.gz
+  sha256: 7320a4d37fde495358262cf3cd7b6a832a4a410d376fdc6b50b784bdc353a1b2
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
+  entry_points:
+    - mache = mache.__main__:main
 
 requirements:
   host:
@@ -23,11 +26,18 @@ requirements:
     - lxml
     - jinja2
     - pyyaml
+    - progressbar2
+    - rsync
 
 
 test:
+  requires:
+    - pip
   imports:
     - mache
+  commands:
+    - pip check
+    - mache sync diags --help
 
 about:
   home: https://github.com/E3SM-Project/mache
