@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b8920170ee75c266806adad0e1d09c7ca6c350173098aad424b05fa5f938f67b
+  sha256: d75c48a3e90eb1f2c6e4858a17a3406ed6b0042917f95b9bf7a6dcfb1ff47e51
 
 build:
   number: 0
@@ -22,8 +22,9 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - lxml
+    - importlib_resources
     - jinja2
+    - lxml
     - pyyaml
     - progressbar2
     - rsync
