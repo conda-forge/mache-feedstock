@@ -1,11 +1,11 @@
-About mache
-===========
+About mache-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mache-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/E3SM-Project/mache
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mache-feedstock/blob/main/LICENSE.txt)
 
 Summary: A package for providing configuration data relate to E3SM supported machines
 
