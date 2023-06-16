@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.10.0rc2" %}
+{% set version = "1.16.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,11 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 6fa2187b658dae5fb68420798c11e95f427f8392321049ad8a65270cad05af46
+  sha256: 8ab10972fbcd80abdf55eb3b701d9f2457960f58528170971d4682a720c07cca
 
 build:
   number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
   entry_points:
     - mache = mache.__main__:main
@@ -21,12 +22,12 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - lxml
+    - importlib_resources
     - jinja2
+    - lxml
     - pyyaml
     - progressbar2
     - rsync
-
 
 test:
   requires:
