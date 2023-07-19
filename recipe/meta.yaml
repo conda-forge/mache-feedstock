@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
   sha256: 80f679a453b7cab48ee875bdfdc76e375ad4174a476befb0f660114d6ad84f65
+  patches:
+    - 0001-version.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
   entry_points:
