@@ -36,14 +36,14 @@ Current release info
 Installing mache
 ================
 
-Installing `mache` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `mache` from the `conda-forge/label/mache_dev` channel can be achieved by adding `conda-forge/label/mache_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/mache_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mache` can be installed with `conda`:
+Once the `conda-forge/label/mache_dev` channel has been enabled, `mache` can be installed with `conda`:
 
 ```
 conda install mache
@@ -58,26 +58,26 @@ mamba install mache
 It is possible to list all of the versions of `mache` available on your platform with `conda`:
 
 ```
-conda search mache --channel conda-forge
+conda search mache --channel conda-forge/label/mache_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search mache --channel conda-forge
+mamba search mache --channel conda-forge/label/mache_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search mache --channel conda-forge
+mamba repoquery search mache --channel conda-forge/label/mache_dev
 
 # List packages depending on `mache`:
-mamba repoquery whoneeds mache --channel conda-forge
+mamba repoquery whoneeds mache --channel conda-forge/label/mache_dev
 
 # List dependencies of `mache`:
-mamba repoquery depends mache --channel conda-forge
+mamba repoquery depends mache --channel conda-forge/label/mache_dev
 ```
 
 
@@ -99,7 +99,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
