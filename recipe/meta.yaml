@@ -10,8 +10,7 @@ source:
   sha256: 9eb5ed790147c348c78bd753119e21a9e4c8088e5ec501f82a8db751f8f93e8a
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
   noarch: python
   entry_points:
     - mache = mache.__main__:main
