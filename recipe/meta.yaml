@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.23.0" %}
+{% set version = "1.24.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,9 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 64acc008b3eb71fe4be68b6f85b063f91bce2d54c4f04219e7a338f1ab192037
+  sha256: a1871a928901d0ab25d125f93a6c3cfb0f733e00fb4c56d53250142f6c842330
+  patches:
+    - 0001-add-manifest-in.patch
 
 build:
   number: 0
@@ -19,6 +21,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools >=60
   run:
     - python >=3.8
     - importlib_resources
@@ -43,10 +46,10 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: A package for providing configuration data relate to E3SM supported machines
-  doc_url: https://github.com/E3SM-Project/mache/README.rst
+  doc_url: https://docs.e3sm.org/mache/
   dev_url: https://github.com/E3SM-Project/mache
 
 extra:
   recipe-maintainers:
-    - altheadenlinger
+    - altheaden
     - xylar

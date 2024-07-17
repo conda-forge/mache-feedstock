@@ -1,0 +1,21 @@
+diff -ruN mache-1.24.0/MANIFEST.in mache-1.24.0-patch/MANIFEST.in
+--- mache-1.24.0/MANIFEST.in	1970-01-01 01:00:00.000000000 +0100
++++ mache-1.24.0-patch/MANIFEST.in	2024-07-17 22:54:14.849374003 +0200
+@@ -0,0 +1,6 @@
++include mache/cime_machine_config/*.xml
++include mache/machines/*.cfg
++include mache/spack/*.yaml
++include mache/spack/*.template
++include mache/spack/*.sh
++include mache/spack/*.csh
+diff -ruN mache-1.24.0/pyproject.toml mache-1.24.0-patch/pyproject.toml
+--- mache-1.24.0/pyproject.toml	2024-07-17 19:07:37.000000000 +0200
++++ mache-1.24.0-patch/pyproject.toml	2024-07-17 22:54:51.145202921 +0200
+@@ -68,7 +68,6 @@
+ [build-system]
+ requires = [
+     "setuptools>=60",
+-    "setuptools-scm>=8.0",
+ ]
+ build-backend = "setuptools.build_meta"
+ 
