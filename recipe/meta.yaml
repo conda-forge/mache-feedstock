@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
   sha256: a1871a928901d0ab25d125f93a6c3cfb0f733e00fb4c56d53250142f6c842330
+  patches:
+    - 0001-add-manifest-in.patch
 
 build:
   number: 0
@@ -20,7 +22,6 @@ requirements:
     - python >=3.8
     - pip
     - setuptools >=60
-    - setuptools-scm >=8.0
   run:
     - python >=3.8
     - importlib_resources
