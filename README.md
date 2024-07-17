@@ -11,7 +11,7 @@ Summary: A package for providing configuration data relate to E3SM supported mac
 
 Development: https://github.com/E3SM-Project/mache
 
-Documentation: https://github.com/E3SM-Project/mache/README.rst
+Documentation: https://docs.e3sm.org/mache/
 
 Current build status
 ====================
@@ -147,6 +147,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@altheadenlinger](https://github.com/altheadenlinger/)
+* [@altheaden](https://github.com/altheaden/)
 * [@xylar](https://github.com/xylar/)
 
