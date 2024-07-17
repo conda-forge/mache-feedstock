@@ -19,6 +19,8 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools >=60
+    - setuptools-scm >=8.0
   run:
     - python >=3.8
     - importlib_resources
@@ -43,10 +45,10 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: A package for providing configuration data relate to E3SM supported machines
-  doc_url: https://github.com/E3SM-Project/mache/README.rst
+  doc_url: https://docs.e3sm.org/mache/
   dev_url: https://github.com/E3SM-Project/mache
 
 extra:
   recipe-maintainers:
-    - altheadenlinger
+    - altheaden
     - xylar
