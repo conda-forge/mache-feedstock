@@ -1,0 +1,35 @@
+From ee072e6604357eaab1bbb6f0078633df99a44877 Mon Sep 17 00:00:00 2001
+From: Xylar Asay-Davis <xylarstorm@gmail.com>
+Date: Tue, 23 Jul 2024 10:19:34 -0500
+Subject: [PATCH] Omit OMP* environment variables with gnu on chrysalis
+
+They are causing very bad slowdown in the Polaris pr test suite.
+---
+ mache/spack/chrysalis_gnu_openmpi.csh | 5 +++--
+ mache/spack/chrysalis_gnu_openmpi.sh  | 5 +++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/mache/spack/chrysalis_gnu_openmpi.csh b/mache/spack/chrysalis_gnu_openmpi.csh
+index a7a4c3f..f45699e 100644
+--- a/mache/spack/chrysalis_gnu_openmpi.csh
++++ b/mache/spack/chrysalis_gnu_openmpi.csh
+@@ -1,4 +1,5 @@
+ setenv OMPI_MCA_sharedfp "^lockedfile,individual"
+ setenv UCX_TLS "^xpmem"
+-setenv OMP_STACKSIZE 128M
+-setenv OMP_PLACES cores
++## purposefully omitting OMP variables that slow down MPAS-Ocean runs
++#setenv OMP_STACKSIZE 128M
++#setenv OMP_PLACES cores
+diff --git a/mache/spack/chrysalis_gnu_openmpi.sh b/mache/spack/chrysalis_gnu_openmpi.sh
+index cd40eaf..019df54 100644
+--- a/mache/spack/chrysalis_gnu_openmpi.sh
++++ b/mache/spack/chrysalis_gnu_openmpi.sh
+@@ -1,4 +1,5 @@
+ export OMPI_MCA_sharedfp="^lockedfile,individual"
+ export UCX_TLS="^xpmem"
+-export OMP_STACKSIZE=128M
+-export OMP_PLACES=cores
++## purposefully omitting OMP variables that slow down MPAS-Ocean runs
++#export OMP_STACKSIZE=128M
++#export OMP_PLACES=cores

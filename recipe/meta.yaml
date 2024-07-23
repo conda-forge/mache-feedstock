@@ -10,9 +10,10 @@ source:
   sha256: a1871a928901d0ab25d125f93a6c3cfb0f733e00fb4c56d53250142f6c842330
   patches:
     - 0001-add-manifest-in.patch
+    - 0002-comment-out-omp-on-chrysalis-gnu.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - mache = mache.__main__:main
