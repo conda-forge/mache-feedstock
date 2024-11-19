@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.26.0" %}
+{% set version = "1.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 8646a39d71ccba6ebb7aa26eec5929e602f3fb881794162041bd3236ff6ffeb9
+  sha256: b4208d79707c34d7b765083fac9cdfa851da026d5b9444743d58269a5d58e551
 
 build:
   number: 0
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools >=60
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - importlib_resources
     - jinja2
     - lxml
@@ -31,6 +31,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   imports:
     - mache
