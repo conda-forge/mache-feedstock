@@ -12,8 +12,6 @@ source:
 build:
   number: 0
   noarch: python
-  entry_points:
-    - mache = mache.__main__:main
 
 requirements:
   host:
@@ -28,6 +26,7 @@ requirements:
     - pyyaml
     - progressbar2
     - rsync
+    - termcolor
 
 test:
   requires:
