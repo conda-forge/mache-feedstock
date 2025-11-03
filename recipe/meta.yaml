@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "2.0.0rc2" %}
+{% set version = "2.0.0rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: dd9470b7d7de62a8cf25dce6a4f2afcec35d73220df3402ea530707eabf4a3b5
+  sha256: bd02b0c5a30b049bcd723b7dd01fa3c32522d09368b993c4363bb67432459b15
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - importlib_resources
     - jinja2
     - lxml
+    - packaging
     - pyyaml
     - requests
     - rsync
