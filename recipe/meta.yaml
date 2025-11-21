@@ -19,14 +19,16 @@ requirements:
     - pip
     - setuptools >=60
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.14
     - importlib_resources
     - jinja2
     - lxml
+    - packaging
     - pyyaml
-    - progressbar2
+    - requests
     - rsync
     - termcolor
+    - tqdm
 
 test:
   requires:
