@@ -1,5 +1,5 @@
 {% set name = "mache" %}
-{% set version = "1.32.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 6e96bae2ada73511a5e60a14fd83aa65917e0e6f065e3f747df620a63958b424
+  sha256: df3fdf18a413d7289f64d48219d0db1c1fcc3161f5a6af03a73d133d0d6238dd
 
 build:
   number: 0
@@ -23,10 +23,12 @@ requirements:
     - importlib_resources
     - jinja2
     - lxml
+    - packaging
     - pyyaml
-    - progressbar2
+    - requests
     - rsync
     - termcolor
+    - tqdm
 
 test:
   requires:
@@ -50,5 +52,4 @@ about:
 extra:
   recipe-maintainers:
     - andrewdnolan
-    - altheaden
     - xylar
