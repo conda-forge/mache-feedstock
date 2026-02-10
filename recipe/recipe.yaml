@@ -37,13 +37,12 @@ tests:
   - python:
       imports:
         - mache
+      pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
       run:
         - python ${{ python_min }}.*
-        - pip
     script:
-      - pip check
       - mache sync diags --help
 
 about:
