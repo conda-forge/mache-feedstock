@@ -43,6 +43,10 @@ tests:
       run:
         - python ${{ python_min }}.*
     script:
+      - mache deploy init --help
+      - mache deploy update --help
+      - mache deploy run --help
+      - mache jigsaw install --help
       - mache sync diags --help
 
 about:
