@@ -17,11 +17,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13912&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mache-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
@@ -36,14 +35,14 @@ Current release info
 Installing mache
 ================
 
-Installing `mache` from the `conda-forge/label/mache_dev` channel can be achieved by adding `conda-forge/label/mache_dev` to your channels with:
+Installing `mache` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/mache_dev
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/mache_dev` channel has been enabled, `mache` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `mache` can be installed with `conda`:
 
 ```
 conda install mache
@@ -58,26 +57,26 @@ mamba install mache
 It is possible to list all of the versions of `mache` available on your platform with `conda`:
 
 ```
-conda search mache --channel conda-forge/label/mache_dev
+conda search mache --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search mache --channel conda-forge/label/mache_dev
+mamba search mache --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search mache --channel conda-forge/label/mache_dev
+mamba repoquery search mache --channel conda-forge
 
 # List packages depending on `mache`:
-mamba repoquery whoneeds mache --channel conda-forge/label/mache_dev
+mamba repoquery whoneeds mache --channel conda-forge
 
 # List dependencies of `mache`:
-mamba repoquery depends mache --channel conda-forge/label/mache_dev
+mamba repoquery depends mache --channel conda-forge
 ```
 
 
@@ -147,6 +146,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@altheaden](https://github.com/altheaden/)
+* [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@xylar](https://github.com/xylar/)
 
