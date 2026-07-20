@@ -151,6 +151,3 @@ Feedstock Maintainers
 * [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-

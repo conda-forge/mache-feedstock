@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mache
-  version: "3.9.0"
+  version: "3.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 102c404b5599145bc40eab8f53c06f11954d2b42d7e9f7193fd22992d6a9bfbb
+  sha256: 9bfcb88e73f31ae84f5d86808da056d8922f312f2fdb2c3ce9ba382d3e64e8df
 
 build:
   number: 0
