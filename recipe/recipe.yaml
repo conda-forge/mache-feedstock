@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mache
-  version: 3.3.0rc2
+  version: "5.0.0rc1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 83612e945961b2e34cf5c3cf44772ea2390fe2a569fae300549956f958ee711b
+  sha256: 008a946172e990df48838e552afa8794fc4264ddc4db12a541328c8fac2f656b
 
 build:
   number: 0
@@ -20,25 +20,27 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools >=60
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
     - importlib_resources
-    - jinja2
+    - jinja2 >=2.9
     - lxml
     - packaging
     - pyyaml
     - requests
-    - rsync
     - termcolor
     - tqdm
+    - rsync
 
 tests:
   - python:
       imports:
         - mache
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
