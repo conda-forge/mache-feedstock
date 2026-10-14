@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mache
-  version: "4.0.0"
+  version: "5.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/mache/archive/refs/tags/${{ version }}.tar.gz
-  sha256: bb2f27115d4e8eb36d8664e0ddf5efb57bd1456a887bb10960d63bfb473a6ad6
+  sha256: f4afc7a5b9a4558b17518d5a6a4bad962ac9fe4cbeba691ef78f6c6922b45c3d
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools >=60
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
     - importlib_resources
