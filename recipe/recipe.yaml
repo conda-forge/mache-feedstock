@@ -50,6 +50,11 @@ tests:
       - mache deploy run --help
       - mache jigsaw install --help
       - mache sync diags --help
+  - script:
+      - python run_test.py
+    files:
+      recipe:
+        - run_test.py
 
 about:
   license: BSD-3-Clause
